@@ -36,7 +36,8 @@ const app = {
     }
     const todo = this._state.todos[position];
     todo.completed = !todo.completed;
-  }
+  },
+
   addToDo: function(newTodo) {
     const newToDoObj = {
       text: newTodo,
