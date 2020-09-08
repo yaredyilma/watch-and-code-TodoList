@@ -1,16 +1,24 @@
 const renderTodos = (todosArr) => {
+  
   const ulEl = document.createElement('ul');
 
   for (const todo of todosArr) {
     const liEl = document.createElement('li');
 
-    const checkBoxEl = document.createElement('input');
-    checkBoxEl.type = 'checkbox';
-    if (todo.completed) {
-      checkBoxEl.setAttribute('checked', true);
-    }
-    checkBoxEl.id = todosArr.indexOf(todo);
-    liEl.appendChild(checkBoxEl);
+   // const checkBoxEl = document.createElement('input');
+   // checkBoxEl.type = 'checkbox';
+   // if (todo.completed) {
+    //  checkBoxEl.setAttribute('checked', true);
+   // }
+   liEl.id = todosArr.indexOf(todo);
+  // <li><span><i class="fas fa-trash-alt"></i></span> read a book</li>
+  const spanEl = document.createElement('span');
+  const iEl = document.createElement('i');
+  iEl.classList.add('fas');
+  iEl.classList.add('fa-trash-alt');
+  spanEl.appendChild(iEl)
+
+    liEl.appendChild(spanEl);
 
     liEl.innerHTML += todo.text;
     ulEl.appendChild(liEl);
