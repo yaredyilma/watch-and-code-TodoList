@@ -37,4 +37,16 @@ const app = {
     const todo = this._state.todos[position];
     todo.completed = !todo.completed;
   }
+  addToDo: function(newTodo) {
+    const newToDoObj = {
+      text: newTodo,
+      completed: false
+    }
+    this._state.todos.push(newToDoObj);
+  },
+
+  removeToDo: function(index) {
+    this._state.todos.splice(index, 1);
+  }
 }
+
