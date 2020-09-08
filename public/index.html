@@ -6,6 +6,55 @@
   <title></title>
 
   <link href="./style.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+</head>
+
+<body>
+ <div id="container">
+  <h1>To Do List <i class="fa fa-plus"></i></h1>
+  <input id="todo-input" type="text" placeholder="Add New Todo">
+  <div id='root'>
+    
+  </div>
+ </div>
+  
+
+  <!-- load the testing & reviewing dependencies -->
+  <script src='../lib/gremlins.js'></script>
+  <script src='../lib/chai-and-chai-dom.js'></script>
+  <script src='../lib/describe-it.js'></script>
+  <script src='../lib/deep-clone.js'></script>
+  <script src='../lib/logger.js'></script>
+  <script src='../lib/review-buttons.js'></script>
+
+  <!-- load & test the app object -->
+  <script src='../src/app.js'></script>
+  <script src='../src/app.spec.js'></script>
+
+  <!-- load your views -->
+  <script src='../src/views/render-todos.js'></script>
+
+
+  <!-- load your handlers -->
+  <script src='../src/handlers/add-todo.js'></script>
+  <script src='../src/handlers/input-todo.js'></script>
+  <script src='../src/handlers/remove-todo.js'></script>
+  <script src='../src/handlers/toggle-completed.js'></script>
+
+  <!-- listener -->
+  <script src="../src/listeners/add-todo.js"></script>
+  <script src='../src/listeners/remove-todo.js'></script>
+  <script src='../src/listeners/input-todo.js'></script>
+  <script src='../src/listeners/toggle-completed.js'></script>
+
+
+  <!-- initialize the web page -->
+  <script src='../src/data.js'></script>
+  <script src='../src/init.js'></script>
+</body>
+
+</html>
 
 </head>
 
