@@ -33,7 +33,6 @@ const addToDoHandler = (event) => {
    }
   }
   
-
   logger.push({
     action: 'add todo',
     event,
